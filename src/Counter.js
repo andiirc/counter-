@@ -1,16 +1,11 @@
 import  React, { Component } from 'react'
 import { observer } from 'mobx-react'
 
-const Counter = observer(
 class Counter extends Component{
 
-    increment = (e) => {
-      this.props.store.increment()
-    }
+    increment = (e) =>  this.props.store.increment()
 
-    decrement = (e) =>{
-      this.props.store.decrement()
-    }
+    decrement = (e) => this.props.store.decrement()
 
     render(){
         return (
@@ -22,6 +17,6 @@ class Counter extends Component{
         )
     }
 
-})
+}
 
-export default Counter
+export default observer(Counter)
